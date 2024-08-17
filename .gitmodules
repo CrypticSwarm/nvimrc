@@ -1,0 +1,3 @@
+[submodule "deps/lazy"]
+	path = deps/lazy
+	url = git@github.com:folke/lazy.nvim.git
