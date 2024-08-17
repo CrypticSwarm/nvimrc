@@ -40,3 +40,5 @@ vim.opt.shiftround = true  -- Round indent to a multiple of 'shiftwidth'.
 vim.opt.hidden = true      -- allow hidden buffers
 vim.opt.splitright = true  -- open vsp to the right
 vim.opt.splitbelow = true  -- open sp to the below
+
+vim.cmd.colorscheme 'desert'
