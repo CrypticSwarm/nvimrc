@@ -64,3 +64,16 @@ vim.keymap.set('n', '<leader>>', '<C-w>5>', { desc = 'Decrease current window ho
 -- Make page up and down work in insert mode
 vim.keymap.set('i', '<C-f>', '<C-o><C-f>', { desc = 'Ctrl+f in insert mode' })
 vim.keymap.set('i', '<C-b>', '<C-o><C-b>', { desc = 'Ctrl+b in insert mode' })
+
+-- Lazy package manager config
+vim.opt.rtp:prepend(vim.fn.stdpath 'config' .. '/deps/lazy')
+
+require('lazy').setup({
+  {
+    'folke/tokyonight.nvim',
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'tokyonight-night'
+    end,
+  },
+})
