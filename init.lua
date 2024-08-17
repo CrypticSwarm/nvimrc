@@ -42,3 +42,6 @@ vim.opt.splitright = true  -- open vsp to the right
 vim.opt.splitbelow = true  -- open sp to the below
 
 vim.cmd.colorscheme 'desert'
+
+-- Jump from insert into normal mode
+vim.keymap.set('i', 'kj', '<ESC>', { desc = 'Alias for existing insert mode' })
