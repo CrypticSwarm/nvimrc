@@ -179,6 +179,10 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>gb', ':Git blame<cr>', { desc = '[G]it [B]lame', silent = true })
       vim.keymap.set('n', '<leader>gl', ':Gclog', { desc = '[G]it [L]og', silent = true })
     end
+  },
+  {
+    'tpope/vim-surround',
+    commit = 'aeb933272e72617f7c4d35e1f003be16836b948d'
   }
 }, {
   ui = {
