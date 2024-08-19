@@ -181,6 +181,10 @@ require('lazy').setup({
     end
   },
   {
+    'tpope/vim-rhubarb', -- GBrowse support
+    commit = 'ee69335de176d9325267b0fd2597a22901d927b1'
+  },
+  {
     'tpope/vim-surround',
     commit = 'aeb933272e72617f7c4d35e1f003be16836b948d'
   },
