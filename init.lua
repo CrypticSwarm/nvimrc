@@ -45,6 +45,7 @@ vim.cmd.colorscheme 'desert'
 
 -- Jump from insert into normal mode
 vim.keymap.set('i', 'kj', '<ESC>', { desc = 'Alias for existing insert mode' })
+vim.keymap.set('v', '.', ':normal .<cr>', { desc = 'Repeat in visual mode', silent = true })
 
 -- Window commands
 vim.keymap.set('n', '<leader>wl', '<C-w>l', { desc = 'Move focus to the right window' })
