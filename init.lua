@@ -43,7 +43,7 @@ vim.opt.splitbelow = true  -- open sp to the below
 
 vim.cmd.colorscheme 'desert'
 
--- Jump from insert into normal mode
+-- Util commands
 vim.keymap.set('i', 'kj', '<ESC>', { desc = 'Alias for existing insert mode' })
 vim.keymap.set('v', '.', ':normal .<cr>', { desc = 'Repeat in visual mode', silent = true })
 
@@ -196,6 +196,10 @@ require('lazy').setup({
   {
     'tpope/vim-surround',
     commit = 'aeb933272e72617f7c4d35e1f003be16836b948d'
+  },
+  {
+    'tommcdo/vim-exchange',
+    commit = 'd6c1e9790bcb8df27c483a37167459bbebe0112e'
   },
   {
     'esamattis/slimux', -- Temporary for now until figuring out a better way in nvim
