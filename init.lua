@@ -148,6 +148,24 @@ require('lazy').setup({
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
+  { -- Highlight, edit, and navigate code
+    'nvim-treesitter/nvim-treesitter',
+    commit = 'f197a15b0d1e8d555263af20add51450e5aaa1f0',
+    build = ':TSUpdate',
+    opts = {
+      -- Autoinstall languages that are not installed
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      auto_install = true,
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = { 'markdown' }
+      },
+      indent = { enable = true },
+    },
+    config = function(_, opts)
+      require('nvim-treesitter.configs').setup(opts)
+    end,
+  }
 }, {
   ui = {
     -- Default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
