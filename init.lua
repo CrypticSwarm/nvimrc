@@ -65,6 +65,14 @@ vim.keymap.set('n', '<leader>>', '<C-w>5>', { desc = 'Decrease current window ho
 vim.keymap.set('i', '<C-f>', '<C-o><C-f>', { desc = 'Ctrl+f in insert mode' })
 vim.keymap.set('i', '<C-b>', '<C-o><C-b>', { desc = 'Ctrl+b in insert mode' })
 
+
+-- Built in file browser
+vim.g.netrw_banner = 0    -- Don't display the netrw banner
+vim.g.netrw_winsize = -35
+vim.g.netrw_liststyle = 3 -- Use tree-mode as default view
+vim.g.netrw_preview = 1   -- preview window shown in a vertically split
+vim.keymap.set('n', '<leader>f', ':Lexplore<CR>', { desc = "Open [F]ile tree", silent = true })
+
 -- Lazy package manager config
 vim.opt.rtp:prepend(vim.fn.stdpath 'config' .. '/deps/lazy')
 
