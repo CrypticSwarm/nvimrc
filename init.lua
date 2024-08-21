@@ -80,6 +80,7 @@ vim.opt.rtp:prepend(vim.fn.stdpath 'config' .. '/deps/lazy')
 require('lazy').setup({
   {
     'folke/tokyonight.nvim',
+    commit = '2cd12582c98a3552032824ffa67fd44b4d81184a',
     priority = 1000,
     init = function()
       vim.cmd.colorscheme 'tokyonight-night'
