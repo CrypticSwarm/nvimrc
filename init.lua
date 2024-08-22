@@ -41,6 +41,10 @@ vim.opt.hidden = true      -- allow hidden buffers
 vim.opt.splitright = true  -- open vsp to the right
 vim.opt.splitbelow = true  -- open sp to the below
 
+-- Conceal config
+vim.opt.concealcursor = 'c'
+vim.opt.conceallevel = 2
+
 vim.cmd.colorscheme 'desert'
 
 -- Util commands
