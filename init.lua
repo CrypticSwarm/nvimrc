@@ -225,6 +225,24 @@ require('lazy').setup({
     config = function ()
       require('orgmode').setup({})
     end
+  },
+  {
+    "akinsho/org-bullets.nvim", 
+    commit = '7e76e04827ac3fb13fc645a6309ac14203c4ca6a',
+    config = function()
+      require("org-bullets").setup({
+        concealcursor = false,
+        symbols = {
+          list = "•",
+          headlines = { "", "", "", "", "" },
+          checkboxes = {
+            half = { "", "@org.checkbox.halfchecked" },
+            done = { "", "@org.keyword.done" },
+            todo = { "", "@org.keyword.todo" },
+          },
+        }
+      })
+    end
   }
 }, {
   ui = {
