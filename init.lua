@@ -216,6 +216,15 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>aa', ':SlimuxShellLast<CR>', { desc = 'Select shell', silent = true })
       vim.keymap.set('n', '<leader>ai', ':SlimuxShellPrompt<CR>', { desc = 'Shell prompt', silent = true })
     end
+  },
+  {
+    'nvim-orgmode/orgmode',
+    commit = 'cda615fa7c8607bfb7aaf7d2c9424dd5969f2625',
+    event = 'VeryLazy',
+    ft = { 'org' },
+    config = function ()
+      require('orgmode').setup({})
+    end
   }
 }, {
   ui = {
