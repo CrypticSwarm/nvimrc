@@ -81,6 +81,8 @@ vim.keymap.set('n', '<leader>f', ':Lexplore<CR>', { desc = "Open [F]ile tree", s
 -- Lazy package manager config
 vim.opt.rtp:prepend(vim.fn.stdpath 'config' .. '/deps/lazy')
 
+vim.g.have_nerd_font = true
+
 require('lazy').setup({
   {
     'folke/tokyonight.nvim',
