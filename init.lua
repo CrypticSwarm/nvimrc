@@ -226,7 +226,11 @@ require('lazy').setup({
     ft = { 'org' },
     config = function ()
       require('orgmode').setup({
-        org_default_notes_file = os.getenv("NOTES_PATH") .. "inbox.org"
+        org_default_notes_file = os.getenv("NOTES_PATH") .. "inbox.org",
+        org_capture_templates = {
+          t = { description = 'Task', template = '* TODO %?\n  %T' },
+          r = { description = 'Random thought', template = '* %?\n  %T' }
+        }
       })
     end
   },
