@@ -225,13 +225,15 @@ require('lazy').setup({
     event = 'VeryLazy',
     ft = { 'org' },
     config = function ()
+      default_notes_file = os.getenv("NOTES_PATH") .. "inbox.org"
       require('orgmode').setup({
-        org_default_notes_file = os.getenv("NOTES_PATH") .. "inbox.org",
+        org_default_notes_file = default_notes_file,
         org_capture_templates = {
           t = { description = 'Task', template = '* TODO %?\n  %T' },
           r = { description = 'Random thought', template = '* %?\n  %T' }
         }
       })
+      vim.keymap.set('n', '<leader>oi', ':tabedit ' .. default_notes_file .. '<CR>', { desc = '[O]rg [I]nbox', silent = true })
     end
   },
   {
@@ -259,7 +261,19 @@ require('lazy').setup({
     event = 'VeryLazy',
     config = function()
       require("org-roam").setup({
-        directory = os.getenv("NOTES_PATH")
+        directory = os.getenv("NOTES_PATH"),
+        templates = {
+          i = {
+            description = "inbox",
+            template = "%?",
+            target = "inbox/%[slug].org"
+          },
+          d = {
+            description = "devops",
+            template = "%?",
+            target = "devops/%[slug].org"
+          }
+        }
       })
     end
   }
