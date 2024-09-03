@@ -231,6 +231,7 @@ require('lazy').setup({
   {
     "akinsho/org-bullets.nvim", 
     commit = '7e76e04827ac3fb13fc645a6309ac14203c4ca6a',
+    event = 'VeryLazy',
     config = function()
       require("org-bullets").setup({
         concealcursor = false,
@@ -243,6 +244,16 @@ require('lazy').setup({
             todo = { "", "@org.keyword.todo" },
           },
         }
+      })
+    end
+  },
+  {
+    'chipsenkbeil/org-roam.nvim',
+    commit = '9119ceebffd706108335c159c795c10daf248733',
+    event = 'VeryLazy',
+    config = function()
+      require("org-roam").setup({
+        directory = os.getenv("NOTES_PATH")
       })
     end
   }
