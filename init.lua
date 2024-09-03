@@ -225,7 +225,9 @@ require('lazy').setup({
     event = 'VeryLazy',
     ft = { 'org' },
     config = function ()
-      require('orgmode').setup({})
+      require('orgmode').setup({
+        org_default_notes_file = os.getenv("NOTES_PATH") .. "inbox.org"
+      })
     end
   },
   {
