@@ -263,15 +263,40 @@ require('lazy').setup({
       require("org-roam").setup({
         directory = os.getenv("NOTES_PATH"),
         templates = {
-          i = {
-            description = "inbox",
+          n = {
+            description = "[N]otes",
             template = "%?",
-            target = "inbox/%[slug].org"
+            target = "notes/%[slug].org"
           },
           d = {
-            description = "devops",
-            template = "%?",
+            description = "[D]evops",
+            template = "* %?",
             target = "devops/%[slug].org"
+          },
+          p = {
+            description = "[P]rogramming",
+            template = "* %? :programming:",
+            target = "programming/%[slug].org"
+          },
+          f = {
+            description = "[F]ood and recipes",
+            template = "* %? :food:recipe:\n  Created: %u",
+            target = "food/%[slug].org"
+          },
+          r = {
+            description = "[R]eading",
+            template = "* %? :reading:",
+            target = "reading/%[slug].org"
+          },
+          m = {
+            description = "[M]ath",
+            template = "%? :math:",
+            target = "math/%[slug].org"
+          },
+          c = {
+            description = "[C]ompanies",
+            template = "%?",
+            target = "companies/%[slug].org"
           }
         }
       })
