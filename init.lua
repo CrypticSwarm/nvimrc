@@ -225,12 +225,17 @@ require('lazy').setup({
     event = 'VeryLazy',
     ft = { 'org' },
     config = function ()
-      default_notes_file = os.getenv("NOTES_PATH") .. "inbox.org"
+      notes_directory = os.getenv("NOTES_PATH")
+      default_notes_file = notes_directory .. "inbox.org"
       require('orgmode').setup({
         org_default_notes_file = default_notes_file,
         org_capture_templates = {
           t = { description = 'Task', template = '* TODO %?\n  %T' },
           r = { description = 'Random thought', template = '* %?\n  %T' }
+        },
+        org_agenda_files = {
+          default_notes_file,
+          notes_directory .. 'daily/**'
         }
       })
       vim.keymap.set('n', '<leader>oi', ':tabedit ' .. default_notes_file .. '<CR>', { desc = '[O]rg [I]nbox', silent = true })
