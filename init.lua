@@ -302,6 +302,11 @@ require('lazy').setup({
             description = "[C]ompanies",
             template = "%?",
             target = "companies/%[slug].org"
+          },
+          M = {
+            description = "[M]anagement",
+            template = "%?",
+            target = "management/%[slug].org"
           }
         }
       })
