@@ -225,9 +225,11 @@ require('lazy').setup({
     event = 'VeryLazy',
     ft = { 'org' },
     config = function ()
-      notes_directory = os.getenv("NOTES_PATH")
-      default_notes_file = notes_directory .. "inbox.org"
+      local notes_directory = os.getenv("NOTES_PATH")
+      local default_notes_file = notes_directory .. "inbox.org"
       require('orgmode').setup({
+        org_id_method = 'uuid',
+        org_agenda_span = 'week',
         org_default_notes_file = default_notes_file,
         org_capture_templates = {
           t = { description = 'Task', template = '* TODO %?\n  %T' },
@@ -242,7 +244,7 @@ require('lazy').setup({
     end
   },
   {
-    "akinsho/org-bullets.nvim", 
+    "akinsho/org-bullets.nvim",
     commit = '7e76e04827ac3fb13fc645a6309ac14203c4ca6a',
     event = 'VeryLazy',
     config = function()
