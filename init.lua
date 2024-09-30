@@ -386,8 +386,8 @@ require('lazy').setup({
       --  - capabilities (table): Override fields in capabilities. Used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       local servers = {
-        -- pyright = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+        pyright = {},
         lua_ls = { -- https://luals.github.io/wiki/settings/
           settings = {
             Lua = {
