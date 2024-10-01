@@ -425,7 +425,21 @@ require('lazy').setup({
       require('lualine').setup()
       vim.opt.showmode = false
     end
-  }
+  },
+  {
+    'folke/todo-comments.nvim',
+    commit = 'ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0',
+    event = 'VimEnter',
+    dependencies = {
+      {
+        'nvim-lua/plenary.nvim',
+        commit = '50012918b2fc8357b87cff2a7f7f0446e47da174'
+      }
+    },
+    opts = {
+      signs = false
+    }
+  },
 }, {
   ui = {
     -- Default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
