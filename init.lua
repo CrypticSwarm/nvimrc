@@ -265,7 +265,9 @@ require('lazy').setup({
   {
     'chipsenkbeil/org-roam.nvim',
     commit = '9119ceebffd706108335c159c795c10daf248733',
-    event = 'VeryLazy',
+    keys = {
+      { "<leader>nf", ":lua require('org-roam').api.find_node({})" },
+    },
     config = function()
       require("org-roam").setup({
         directory = os.getenv("NOTES_PATH"),
