@@ -24,6 +24,7 @@ vim.opt.incsearch = true   -- Do incremental searching.
 vim.opt.hlsearch = true    -- Highlight latest search pattern.
 vim.opt.ignorecase = true  -- Ignore case for pattern matches (\C overrides).
 vim.opt.smartcase = true   -- Override 'ignorecase' if pattern contains uppercase.
+vim.opt.smartindent = false -- 'smartindent' breaks right-shifting of # lines.
 
 -- Tab Related
 vim.opt.autoindent = true -- Copy indent from current line for new line.
@@ -45,6 +46,13 @@ vim.opt.splitbelow = true  -- open sp to the below
 vim.opt.concealcursor = 'c'
 vim.opt.conceallevel = 2
 
+-- Menu config
+vim.opt.wildmenu = true           -- Use menu when autocompleting
+vim.opt.wildmode = "longest,full" -- Use bash style for first tab, then wildmenu for double
+vim.opt.cursorline = false        -- Don't highlight the current screen line...
+vim.opt.cursorcolumn = false      -- ...or screen column...
+vim.opt.virtualedit = "block"     -- Virtual edit when in visual block mode
+vim.opt.diffopt = vim.opt.diffopt + "vertical" -- Ensure diffs open in vertical splits
 
 -- Util commands
 vim.keymap.set('i', 'kj', '<ESC>', { desc = 'Alias for existing insert mode' })
