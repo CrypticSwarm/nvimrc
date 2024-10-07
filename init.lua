@@ -45,7 +45,6 @@ vim.opt.splitbelow = true  -- open sp to the below
 vim.opt.concealcursor = 'c'
 vim.opt.conceallevel = 2
 
-vim.cmd.colorscheme 'desert'
 
 -- Util commands
 vim.keymap.set('i', 'kj', '<ESC>', { desc = 'Alias for existing insert mode' })
