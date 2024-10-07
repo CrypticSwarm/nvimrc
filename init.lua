@@ -25,6 +25,8 @@ vim.opt.hlsearch = true    -- Highlight latest search pattern.
 vim.opt.ignorecase = true  -- Ignore case for pattern matches (\C overrides).
 vim.opt.smartcase = true   -- Override 'ignorecase' if pattern contains uppercase.
 vim.opt.smartindent = false -- 'smartindent' breaks right-shifting of # lines.
+vim.opt.inccommand = 'split' -- Preview substitutions live
+
 
 -- Tab Related
 vim.opt.autoindent = true -- Copy indent from current line for new line.
