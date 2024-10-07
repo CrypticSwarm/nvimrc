@@ -80,6 +80,10 @@ vim.keymap.set('i', '<C-b>', '<C-o><C-b>', { desc = 'Ctrl+b in insert mode' })
 -- Command Line Movement
 vim.keymap.set('c', '<C-a>', '<C-b>', { desc = 'Jump to beginning of the line' })
 
+-- Buffer nav
+vim.keymap.set('n', '<left>', ':bprev<cr>', { desc = 'Navigate to previous buffer' })
+vim.keymap.set('n', '<right>', ':bnext<cr>', { desc = 'Navigate to next buffer' })
+
 -- Built in file browser
 vim.g.netrw_banner = 0    -- Don't display the netrw banner
 vim.g.netrw_winsize = -35
