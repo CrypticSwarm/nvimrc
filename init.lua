@@ -77,6 +77,8 @@ vim.keymap.set('n', '<leader>>', '<C-w>5>', { desc = 'Decrease current window ho
 vim.keymap.set('i', '<C-f>', '<C-o><C-f>', { desc = 'Ctrl+f in insert mode' })
 vim.keymap.set('i', '<C-b>', '<C-o><C-b>', { desc = 'Ctrl+b in insert mode' })
 
+-- Command Line Movement
+vim.keymap.set('c', '<C-a>', '<C-b>', { desc = 'Jump to beginning of the line' })
 
 -- Built in file browser
 vim.g.netrw_banner = 0    -- Don't display the netrw banner
