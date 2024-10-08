@@ -100,14 +100,6 @@ vim.g.have_nerd_font = true
 
 require('lazy').setup({
   {
-    'folke/tokyonight.nvim',
-    commit = '2cd12582c98a3552032824ffa67fd44b4d81184a',
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-    end,
-  },
-  {
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
     commit = 'a0bbec21143c7bc5f8bb02e0005fa0b982edc026',
@@ -209,6 +201,7 @@ require('lazy').setup({
     'tommcdo/vim-exchange',
     commit = 'd6c1e9790bcb8df27c483a37167459bbebe0112e'
   },
+  require 'cryptic/theme',
   require 'cryptic/term',
   require 'cryptic/git',
   require 'cryptic/org',
@@ -315,14 +308,6 @@ require('lazy').setup({
         },
       }
     end,
-  },
-  {
-    'nvim-lualine/lualine.nvim',
-    commit = 'b431d228b7bbcdaea818bdc3e25b8cdbe861f056',
-    config = function ()
-      require('lualine').setup()
-      vim.opt.showmode = false
-    end
   },
   {
     'folke/todo-comments.nvim',
