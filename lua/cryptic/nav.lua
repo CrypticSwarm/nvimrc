@@ -101,6 +101,10 @@ return {
     },
     opts = {
       signs = false
-    }
+    },
+    config = function (opts)
+      require('todo-comments').setup(opts)
+      vim.keymap.set('n', '<leader>st', ':TodoTelescope<CR>', { desc = '[S]earch [T]odos' })
+    end
   },
 }
