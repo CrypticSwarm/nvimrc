@@ -35,6 +35,10 @@ return {
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         commit = 'c5e07b8ff54187716334d585db34282e46fa2932'
       },
+      {
+        'hrsh7th/cmp-nvim-lsp',
+        commit = '39e2eda76828d88b773cc27a3f61d2ad782c922d'
+      },
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -61,7 +65,7 @@ return {
       })
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      -- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       -- Enable the following language servers
       --
