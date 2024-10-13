@@ -86,6 +86,10 @@ vim.keymap.set('c', '<C-a>', '<C-b>', { desc = 'Jump to beginning of the line' }
 vim.keymap.set('n', '<left>', ':bprev<cr>', { desc = 'Navigate to previous buffer' })
 vim.keymap.set('n', '<right>', ':bnext<cr>', { desc = 'Navigate to next buffer' })
 
+-- Toggles
+vim.keymap.set('n', '<leader>ts', ':set spell!<CR>', { desc = '[T]oggle [S]pell' })
+vim.keymap.set('n', '<leader>tl', ':set list!<CR>', { desc = '[T]oggle [L]ist special characters' })
+
 -- Built in file browser
 vim.g.netrw_banner = 0    -- Don't display the netrw banner
 vim.g.netrw_winsize = -35
