@@ -98,6 +98,13 @@ vim.opt.rtp:prepend(vim.fn.stdpath 'config' .. '/deps/lazy')
 
 vim.g.have_nerd_font = true
 
+-- Resize window autocmd
+local resize_group = vim.api.nvim_create_augroup('resizeWindow', { clear = true })
+vim.api.nvim_create_autocmd({ 'VimResized' }, {
+  group = resize_group,
+  command = 'exe "normal \\<C-W>="',
+})
+
 require('lazy').setup({
   require 'cryptic/theme',
   require 'cryptic/edit',
