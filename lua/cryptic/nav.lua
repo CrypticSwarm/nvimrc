@@ -2,6 +2,32 @@
 -- Walk up from current directory to the $HOME looking for tag files
 vim.opt.tags = { './tags', 'tags', './.tags', '.tags;'.. vim.fn.expand('$HOME') }
 
+-- Window commands
+vim.keymap.set('n', '<leader>wl', '<C-w>l', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<leader>wj', '<C-w>j', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<leader>wk', '<C-w>k', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<leader>wh', '<C-w>h', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<leader>wL', '<C-w>L', { desc = 'Move window to the right side' })
+vim.keymap.set('n', '<leader>wJ', '<C-w>J', { desc = 'Move window to the bottom' })
+vim.keymap.set('n', '<leader>wK', '<C-w>K', { desc = 'Move window to the top' })
+vim.keymap.set('n', '<leader>wH', '<C-w>H', { desc = 'Move window to the left side' })
+vim.keymap.set('n', '<leader>wr', '<C-w>r', { desc = 'Rotate the windows' })
+vim.keymap.set('n', '<leader>+', '<C-w>5+', { desc = 'Increase current window vertical size' })
+vim.keymap.set('n', '<leader>-', '<C-w>5-', { desc = 'Decrease current window vertical size' })
+vim.keymap.set('n', '<leader><', '<C-w>5<', { desc = 'Increase current window horizontal size' })
+vim.keymap.set('n', '<leader>>', '<C-w>5>', { desc = 'Decrease current window horizontal size' })
+
+-- Make page up and down work in insert mode
+vim.keymap.set('i', '<C-f>', '<C-o><C-f>', { desc = 'Ctrl+f in insert mode' })
+vim.keymap.set('i', '<C-b>', '<C-o><C-b>', { desc = 'Ctrl+b in insert mode' })
+
+-- Command Line Movement
+vim.keymap.set('c', '<C-a>', '<C-b>', { desc = 'Jump to beginning of the line' })
+
+-- Buffer nav
+vim.keymap.set('n', '<left>', ':bprev<cr>', { desc = 'Navigate to previous buffer' })
+vim.keymap.set('n', '<right>', ':bnext<cr>', { desc = 'Navigate to next buffer' })
+
 return {
   {
     'nvim-telescope/telescope.nvim',
