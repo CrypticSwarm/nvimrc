@@ -1,3 +1,7 @@
+
+-- Walk up from current directory to the $HOME looking for tag files
+vim.opt.tags = { './tags', 'tags', './.tags', '.tags;'.. vim.fn.expand('$HOME') }
+
 return {
   {
     'nvim-telescope/telescope.nvim',
