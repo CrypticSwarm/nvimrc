@@ -27,6 +27,8 @@ vim.keymap.set('c', '<C-a>', '<C-b>', { desc = 'Jump to beginning of the line' }
 -- Buffer nav
 vim.keymap.set('n', '<left>', ':bprev<cr>', { desc = 'Navigate to previous buffer' })
 vim.keymap.set('n', '<right>', ':bnext<cr>', { desc = 'Navigate to next buffer' })
+vim.keymap.set('n', '<up>', ':cprev<cr>', { desc = 'Navigate to previous quickfix result' })
+vim.keymap.set('n', '<down>', ':cnext<cr>', { desc = 'Navigate to next quickfix result' })
 
 return {
   {
