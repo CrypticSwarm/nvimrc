@@ -1,7 +1,7 @@
 return {
   {
     'nvim-orgmode/orgmode',
-    commit = 'cda615fa7c8607bfb7aaf7d2c9424dd5969f2625',
+    commit = 'ac6e02ab638ee324b3e3894e2a05488aad0b467c',
     event = 'VeryLazy',
     ft = { 'org' },
     config = function ()
