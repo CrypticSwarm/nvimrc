@@ -44,7 +44,7 @@ return {
   },
   {
     'chipsenkbeil/org-roam.nvim',
-    commit = '9119ceebffd706108335c159c795c10daf248733',
+    commit = 'cf00a0b3797ee3370c2ca2bdedbc04b2f5309a1e',
     keys = {
       { "<leader>nf", ":lua require('org-roam').api.find_node({})" },
     },
