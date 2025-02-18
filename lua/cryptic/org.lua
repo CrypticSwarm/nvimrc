@@ -59,38 +59,38 @@ return {
           },
           d = {
             description = "[D]evops",
-            template = "* %?",
-            target = "devops/%[slug].org"
+            template = "* %? :devops:",
+            target = "notes/%[slug].org"
           },
           p = {
             description = "[P]rogramming",
             template = "* %? :programming:",
-            target = "programming/%[slug].org"
+            target = "notes/%[slug].org"
           },
           f = {
             description = "[F]ood and recipes",
             template = "* %? :food:recipe:\n  Created: %u",
-            target = "food/%[slug].org"
+            target = "notes/%[slug].org"
           },
           r = {
             description = "[R]eading",
             template = "* %? :reading:",
-            target = "reading/%[slug].org"
+            target = "notes/%[slug].org"
           },
           m = {
             description = "[M]ath",
-            template = "%? :math:",
-            target = "math/%[slug].org"
+            template = "* %? :math:",
+            target = "notes/%[slug].org"
           },
           c = {
             description = "[C]ompanies",
-            template = "%?",
-            target = "companies/%[slug].org"
+            template = "* %? :companies:",
+            target = "notes/%[slug].org"
           },
           M = {
             description = "[M]anagement",
-            template = "%?",
-            target = "management/%[slug].org"
+            template = "* %? ",
+            target = "notes/%[slug].org"
           }
         }
       })
