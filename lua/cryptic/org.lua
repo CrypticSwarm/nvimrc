@@ -17,7 +17,8 @@ return {
         },
         org_agenda_files = {
           default_notes_file,
-          notes_directory .. 'daily/**'
+          notes_directory .. 'daily/**',
+          notes_directory .. 'projects/**'
         }
       })
       vim.keymap.set('n', '<leader>oi', ':tabedit ' .. default_notes_file .. '<CR>', { desc = '[O]rg [I]nbox', silent = true })
@@ -59,7 +60,7 @@ return {
           },
           p = {
             description = "[P]rojects",
-            template = "* %? :project:",
+            template = "#+FILETAGS: :project:\n\n* Project info\n* Next\n* Completed",
             target = "projects/%[slug].org"
           },
           f = {
