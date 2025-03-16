@@ -1,7 +1,7 @@
 return {
   {
     'nvim-orgmode/orgmode',
-    commit = 'ac6e02ab638ee324b3e3894e2a05488aad0b467c',
+    commit = 'dafb6aa6e2e09362e304a933974c563bab0b464f',
     event = 'VeryLazy',
     ft = { 'org' },
     config = function ()
@@ -25,8 +25,8 @@ return {
     end
   },
   {
-    "akinsho/org-bullets.nvim",
-    commit = '7e76e04827ac3fb13fc645a6309ac14203c4ca6a',
+    "nvim-orgmode/org-bullets.nvim",
+    commit = '21437cfa99c70f2c18977bffd423f912a7b832ea',
     event = 'VeryLazy',
     config = function()
       require("org-bullets").setup({
@@ -45,7 +45,7 @@ return {
   },
   {
     'chipsenkbeil/org-roam.nvim',
-    commit = 'cf00a0b3797ee3370c2ca2bdedbc04b2f5309a1e',
+    commit = 'f92b54eff931982031d5e164482d5e781bb2cd31',
     keys = {
       { "<leader>nf", ":lua require('org-roam').api.find_node({})" },
     },
