@@ -21,7 +21,7 @@ return {
           notes_directory .. 'projects/**'
         }
       })
-      vim.keymap.set('n', '<leader>oi', ':tabedit ' .. default_notes_file .. '<CR>', { desc = '[O]rg [I]nbox', silent = true })
+      vim.keymap.set('n', '<leader>ogi', ':tabedit ' .. default_notes_file .. '<CR>', { desc = '[O]rg [G]o [I]nbox', silent = true })
     end
   },
   {
