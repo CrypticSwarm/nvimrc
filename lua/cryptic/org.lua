@@ -19,7 +19,8 @@ return {
           default_notes_file,
           notes_directory .. 'daily/**',
           notes_directory .. 'projects/**'
-        }
+        },
+        calendar_week_start_day = 0
       })
       vim.keymap.set('n', '<leader>ogi', ':tabedit ' .. default_notes_file .. '<CR>', { desc = '[O]rg [G]o [I]nbox', silent = true })
     end
