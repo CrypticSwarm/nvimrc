@@ -9,7 +9,7 @@ return {
       local default_notes_file = notes_directory .. "inbox.org"
       require('orgmode').setup({
         org_id_method = 'uuid',
-        org_agenda_span = 'week',
+        org_agenda_span = 'day',
         org_default_notes_file = default_notes_file,
         org_capture_templates = {
           t = { description = 'Task', template = '* TODO %?\n  %T' },
