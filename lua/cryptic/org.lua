@@ -29,20 +29,7 @@ return {
     "nvim-orgmode/org-bullets.nvim",
     commit = '21437cfa99c70f2c18977bffd423f912a7b832ea',
     event = 'VeryLazy',
-    config = function()
-      require("org-bullets").setup({
-        concealcursor = false,
-        symbols = {
-          list = "•",
-          headlines = { "", "", "", "", "" },
-          checkboxes = {
-            half = { "", "@org.checkbox.halfchecked" },
-            done = { "", "@org.keyword.done" },
-            todo = { "", "@org.keyword.todo" },
-          },
-        }
-      })
-    end
+    config = function() require("org-bullets").setup({}) end
   },
   {
     'chipsenkbeil/org-roam.nvim',
