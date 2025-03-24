@@ -10,6 +10,7 @@ return {
       require('orgmode').setup({
         org_id_method = 'uuid',
         org_agenda_span = 'day',
+        org_startup_folded = 'content',
         org_default_notes_file = default_notes_file,
         org_capture_templates = {
           t = { description = 'Task', template = '* TODO %?\n  %T' },
