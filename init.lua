@@ -91,7 +91,8 @@ require('lazy').setup({
   require 'cryptic/git',
   require 'cryptic/org',
   require 'cryptic/lsp',
-  require 'cryptic/completion'
+  require 'cryptic/completion',
+  require 'cryptic/ai'
 }, {
   ui = {
     -- Default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
