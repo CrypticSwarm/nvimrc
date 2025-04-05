@@ -9,6 +9,7 @@ return {
       local default_notes_file = notes_directory .. "inbox.org"
       require('orgmode').setup({
         org_id_method = 'uuid',
+        org_id_link_to_org_use_id = true,
         org_agenda_span = 'day',
         org_startup_folded = 'content',
         org_default_notes_file = default_notes_file,
