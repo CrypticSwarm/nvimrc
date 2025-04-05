@@ -20,7 +20,8 @@ return {
         org_agenda_files = {
           default_notes_file,
           notes_directory .. 'daily/**',
-          notes_directory .. 'projects/**'
+          notes_directory .. 'projects/**',
+          notes_directory .. 'filing_cabinet/**'
         },
         calendar_week_start_day = 0
       })
