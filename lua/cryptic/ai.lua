@@ -7,13 +7,24 @@ return {
     print(default_system_prompt)
     require("gp").setup({
       openai_api_key = { 'pass', 'show', 'crypticswarm/openai-apikey' },
+      providers = {
+        local_ollama = { endpoint = "http://localhost:11434/v1/chat/completions", secret = ''},
+      },
       agents = {
         {
-          name = "o1-mini",
+          name = "LLaMa3.1-8B",
+          provider = "local_ollama",
+          chat = true,
+          command = false,
+          model = { model = "llama3.1:8b", temperature = 0.6, top_p = 1, min_p = 0.05 },
+          system_prompt = default_system_prompt
+        },
+        {
+          name = "gpt-5-main",
           provider = "openai",
           chat = true,
           command = true,
-          model = { model = "o1-mini" },
+          model = { model = "gpt-5" },
           system_prompt = default_system_prompt
         },
         {
@@ -30,9 +41,7 @@ return {
           name = "ChatGPT4o-mini",
           chat = true,
           command = false,
-          -- string with model name or table with model name and parameters
           model = { model = "gpt-4o-mini", temperature = 1.1, top_p = 1 },
-          -- system prompt (use this to specify the persona/role of the AI)
           system_prompt = default_system_prompt
         }
       }
