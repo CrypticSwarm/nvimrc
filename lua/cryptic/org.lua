@@ -13,6 +13,7 @@ return {
         org_agenda_span = 'day',
         org_startup_folded = 'content',
         org_default_notes_file = default_notes_file,
+        org_todo_keywords = { 'TODO', '|', 'DONE', 'REJECTED' },
         org_capture_templates = {
           t = { description = 'Task', template = '* TODO %?\n  %T' },
           r = { description = 'Random thought', template = '* %?\n  %T' }
