@@ -1,7 +1,7 @@
 return {
   "robitx/gp.nvim",
   event = 'VeryLazy',
-  commit = '2372d5323c6feaa2e9c19f7ccb537c615d878e18',
+  commit = 'c37f154b97690c4925fef4e35ffdbf2c844b5f4e',
   config = function()
     local default_system_prompt = require("gp.defaults").chat_system_prompt
     print(default_system_prompt)
