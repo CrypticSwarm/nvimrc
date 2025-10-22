@@ -51,5 +51,7 @@ return {
         }
       }
     })
+    vim.keymap.set('n', '<leader>ac', ':GpChatToggle<CR>', { desc = '[A]I [C]hat', silent = true })
+    vim.keymap.set('n', '<leader>as', ':GpSelectAgent<CR>', { desc = '[A]I [S]elect Agent', silent = true })
   end,
 }
